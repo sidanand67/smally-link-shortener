@@ -1,29 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smally | Link Shortener</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Smally | Link Shortener</title>
 
-    <link rel="stylesheet" href="./styles/styles.css">
-</head>
-<body>
-    <header>
-        <h1>smally</h1>
-    </header>
+        <link rel="stylesheet" href="./styles/styles.css" />
 
-    <main>
-        <form onsubmit="event.preventDefault()">
-            <label for="url-box">URL</label>
-            <input type="url" name="url-box" id="url-box" placeholder="Enter your link here..." required>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+       <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>smally</h1>
+        </header>
 
-            <button id="submit-btn">Submit</button>
+        <main>
+            <form onsubmit="event.preventDefault()">
 
-            <textarea name="result-box" id="result-box" cols="30" rows="10" placeholder="Your smally link will appear here..." readonly></textarea>
-        </form>
-    </main>
+                <div class="input-grp">
+                    <label for="url-box">URL</label>
+                    <input
+                        type="url"
+                        name="url-box"
+                        id="url-box"
+                        placeholder="Enter your link here..."
+                        required
+                    />
+                </div>
+                
+                <div class="btn-grp">
+                    <button id="submit-btn">Submit</button>
+                </div>
 
-    <script src="./script.js"></script>
-</body>
+                <textarea
+                    name="result-box"
+                    id="result-box"
+                    placeholder="Your shortened link will appear here..."
+                    readonly
+                ></textarea>
+            </form>
+        </main>
+
+        <script src="./script.js"></script>
+    </body>
 </html>

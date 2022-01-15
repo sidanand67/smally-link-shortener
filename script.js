@@ -9,7 +9,7 @@ function printResult() {
         fetch("https://api-ssl.bitly.com/v4/shorten", {
             method: "POST",
             headers: {
-                Authorization: "",
+                Authorization: "27144fa5489943ba7f999b90a7a9b17048394b48",
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
@@ -17,8 +17,10 @@ function printResult() {
             }),
         })
             .then((response) => response.json())
-            .then(function(data){
-                result_box.innerHTML = data.link; 
+            .then(function (data) {
+                result_box.style.fontSize = "16px";
+                result_box.style.border = "2px solid #0D0630"; 
+                result_box.innerHTML = data.link;
             });
     }
 }
