@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smally | Link Shortener</title>
+
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>smally</h1>
+    </header>
+
+    <main>
+        <form onsubmit="event.preventDefault()">
+            <label for="url-box">URL</label>
+            <input type="url" name="url-box" id="url-box" placeholder="Enter your link here..." required>
+
+            <button id="submit-btn">Submit</button>
+
+            <textarea name="result-box" id="result-box" cols="30" rows="10" placeholder="Your smally link will appear here..." readonly></textarea>
+        </form>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
