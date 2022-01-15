@@ -64,6 +64,10 @@ form{
     opacity: 0.8;
 }
 
+#submit-btn:active{
+    transform: translateY(2px); 
+}
+
 textarea {
     padding: 10px;
     resize: none;
