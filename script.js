@@ -1,5 +1,6 @@
 let submit_btn = document.getElementById("submit-btn");
 let result_box = document.getElementById("result-box");
+let copy_btn = document.getElementById("copy-btn"); 
 let url_inp = document.getElementById("url-box");
 
 function printResult() {
@@ -20,6 +21,8 @@ function printResult() {
             .then(function (data) {
                 result_box.style.fontSize = "16px";
                 result_box.style.border = "2px solid #0D0630"; 
+                copy_btn.disabled = false;
+                copy_btn.style.opacity = "1";
                 result_box.innerHTML = data.link;
             });
     }
@@ -38,5 +41,16 @@ function isValidURL(str) {
     return !!pattern.test(str);
 }
 
+// copying to clipboard
+function copyURL() {
+    result_box.select();
+    document.execCommand("copy");
+    document.getElementById("custom-tooltip").style.display = "inline";
+    setTimeout(function () {
+        document.getElementById("custom-tooltip").style.display = "none";
+    }, 1000);
+}
+
 // Function calls
 submit_btn.addEventListener("click", printResult);
+copy_btn.addEventListener("click", copyURL); 
