@@ -62,10 +62,10 @@ form{
 
 #copy-btn{
     background-color: #2a9d8f;
-    opacity: 0.5;
+    display: none;
 }
 
-#submit-btn:hover{
+#submit-btn:hover, #copy-btn:hover{
     opacity: 0.8;
 }
 

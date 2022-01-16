@@ -21,8 +21,7 @@ function printResult() {
             .then(function (data) {
                 result_box.style.fontSize = "16px";
                 result_box.style.border = "2px solid #0D0630"; 
-                copy_btn.disabled = false;
-                copy_btn.style.opacity = "1";
+                copy_btn.style.display = "block";
                 result_box.innerHTML = data.link;
             });
     }
