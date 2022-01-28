@@ -3,27 +3,32 @@ let result_box = document.getElementById("result-box");
 let copy_btn = document.getElementById("copy-btn"); 
 let url_inp = document.getElementById("url-box");
 
-function printResult() {
+function shortenLink() {
     let url = url_inp.value;
-    if (url != "" && isValidURL(url)) {
+    if (url != "") {
         // make a fetch request to bitly api 
-        fetch("https://api-ssl.bitly.com/v4/shorten", {
-            method: "POST",
-            headers: {
-                Authorization: "27144fa5489943ba7f999b90a7a9b17048394b48",
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                long_url: url,
-            }),
-        })
-            .then((response) => response.json())
-            .then(function (data) {
-                result_box.style.fontSize = "16px";
-                result_box.style.border = "2px solid #0D0630"; 
-                copy_btn.style.display = "block";
-                result_box.innerHTML = data.link;
-            });
+        if (isValidURL(url)){
+            fetch("https://api-ssl.bitly.com/v4/shorten", {
+                method: "POST",
+                headers: {
+                    Authorization: "27144fa5489943ba7f999b90a7a9b17048394b48",
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    long_url: url,
+                }),
+            })
+                .then((response) => response.json())
+                .then(function (data) {
+                    result_box.style.fontSize = "16px";
+                    result_box.style.border = "2px solid #0D0630"; 
+                    copy_btn.style.display = "block";
+                    result_box.innerHTML = data.link;
+                });
+        }
+        else{
+            alert("Please input a valid url."); 
+        }
     }
 }
 
@@ -51,5 +56,5 @@ function copyURL() {
 }
 
 // Function calls
-submit_btn.addEventListener("click", printResult);
+submit_btn.addEventListener("click", shortenLink);
 copy_btn.addEventListener("click", copyURL); 
