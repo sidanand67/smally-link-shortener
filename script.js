@@ -23,7 +23,7 @@ function shortenLink() {
                     result_box.style.fontSize = "16px";
                     result_box.style.border = "2px solid #0D0630"; 
                     copy_btn.style.display = "block";
-                    result_box.innerHTML = data.link;
+                    result_box.value = data.link;
                 });
         }
         else{
@@ -49,7 +49,7 @@ function isValidURL(str) {
 function copyURL() {
     result_box.select();
     document.execCommand("copy");
-    document.getElementById("custom-tooltip").style.display = "inline";
+    document.getElementById("custom-tooltip").style.display = "flex";
     setTimeout(function () {
         document.getElementById("custom-tooltip").style.display = "none";
     }, 1000);

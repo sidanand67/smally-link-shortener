@@ -7,14 +7,12 @@
         <title>Smally | Link Shortener</title>
 
         <link rel="stylesheet" href="./styles/styles.css" />
-
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
        <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+       
     </head>
     <body>
         <header>
-            <h1>smally</h1>
+            <h1><a href="./index.html">smally</a></h1>
         </header>
 
         <main>
@@ -28,17 +26,12 @@
                     <button id="submit-btn">Generate Link</button>
                 </div>
 
-                <textarea
-                    name="result-box"
-                    id="result-box"
-                    placeholder="Your shortened link will appear here..."
-                    readonly
-                ></textarea>
-
-                <div class="btn-grp">
+                <div class="input-grp">
+                    <input type="url" name="result-box" id="result-box" placeholder="Your shortened link will appear here..." readonly>
                     <button id="copy-btn">Copy</button>
+                    <span id="custom-tooltip">copied!</span>
                 </div>
-                <span id="custom-tooltip">copied!</span>
+
             </form>
         </main>
 
