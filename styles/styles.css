@@ -33,16 +33,21 @@ form{
 }
 
 .input-grp label{
-    padding: 10px 10px 10px 0; 
-    font-weight: 600;
+    display: flex;
+    align-items: center;
 }
 
-.input-grp input[type="url"]{
-    width: 70vw;
-    padding: 10px; 
-    font-size: 16px;
-    border-radius: 6px;
+#url-box {
+    padding: 10px;
+    resize: none;
+    min-width: 200px;
+    width: 60vw;
+    max-width: 700px; 
+    height: 10vh;
+    margin-left: 1em; 
+    /* font-size: 16px;  */
     border: 1px solid #dddfe2;
+    border-radius: 5px; 
 }
 
 .btn-grp{
@@ -73,16 +78,7 @@ form{
     transform: translateY(2px); 
 }
 
-textarea {
-    padding: 10px;
-    resize: none;
-    width: 74vw;
-    height: 20vh;
-    margin: 20px auto;
-    /* font-size: 16px;  */
-    border: 1px solid #dddfe2;
-    border-radius: 20px;
-}
+
 
 #custom-tooltip {
     display: none;
