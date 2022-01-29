@@ -21,7 +21,7 @@ header h1{
 form{
     display: flex;
     flex-direction: column;
-    padding: 15px; 
+    /* padding: 15px;  */
     margin: 20px auto;
 }
 
@@ -104,11 +104,11 @@ form{
     }
 
     #url-box{
-        width: 70vw; 
+        width: 85vw; 
     }
 
     #result-box{
-        width: 70vw; 
+        width: 80vw; 
     }
 
     #submit-btn, #copy-btn{
