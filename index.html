@@ -14,26 +14,24 @@
         <header>
             <h1>smally</h1>
         </header>
+        
+        <form onsubmit="event.preventDefault()">
 
-        <main>
-            <form onsubmit="event.preventDefault()">
+            <div class="input-grp">
+                <label for="url-box">URL <textarea name="url-box" id="url-box" placeholder="Place your link here..." required></textarea></label>
+            </div>
+            
+            <div class="btn-grp">
+                <button id="submit-btn">Generate Link</button>
+            </div>
 
-                <div class="input-grp">
-                    <label for="url-box">URL <textarea name="url-box" id="url-box" placeholder="Place your link here..." required></textarea></label>
-                </div>
-                
-                <div class="btn-grp">
-                    <button id="submit-btn">Generate Link</button>
-                </div>
+            <div class="input-grp">
+                <input type="url" name="result-box" id="result-box" placeholder="Your shortened link will appear here..." readonly>
+                <button id="copy-btn">Copy</button>
+                <span id="custom-tooltip">copied!</span>
+            </div>
 
-                <div class="input-grp">
-                    <input type="url" name="result-box" id="result-box" placeholder="Your shortened link will appear here..." readonly>
-                    <button id="copy-btn">Copy</button>
-                    <span id="custom-tooltip">copied!</span>
-                </div>
-
-            </form>
-        </main>
+        </form>
 
         <script src="./script.js"></script>
     </body>
